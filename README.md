@@ -3,7 +3,7 @@
 ## Authors
 
 - Author #1: Vaishnavi Panchal
-- Author #2: [Name]
+- Author #2: Aradhana (Ara) Anandkumar 
 
 ## Project Description
 
@@ -57,5 +57,32 @@ data/
 ├── focus_events.csv
 ├── student_feedback.csv
 └── external_study_data.csv
+```
+
+### Data Analysis and Visualization Plan 
+_Written by Author #2: Aradhana (Ara) Anandkumar_
+
+Our project will entail parsing through users' webcam footage of a certain study session to discern between periods of focus and distraction; and, to differentiate between such periods may vary across user, so the process of parsing through webcam footage with a CV model is vital to deriving key patterns. Our project will process corresponding focus labels (e.g. focused, distracted, afk) produced by the CV model to separate periods of focus from periods of distraction. To account for variability per user, we will smooth the raw labels and only count a distraction or away period if it lasts longer than a short threshold (e.g., 5 to 10 seconds).
+
+We will be utilizing Pandas heavily in our project; primarily to combine `study_sessions.csv`, `focus_events.csv`, and `student_feedback.csv` to calculate the following: 
+
+- Total study, focus, distraction, and afk (away from keyboard) time 
+- Number of distractions _per_ study session
+- Goal focused (represented as a completion rate) that is paired with _target subjects_ (e.g. Calculus focus sprint, Computer Science focus sprint, etc) and by _time_
+
+The visualized data will be stored as follows: 
+```
+output/
+├── focus_timeline.png
+├── focus_by_subject.png
+├── focus_over_time.png
+├── comparison_with_external_data.png
+└── exported_session_summary.csv
+``
+
+
+
+
+
 
 
