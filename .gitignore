@@ -23,3 +23,7 @@ logs/
 *.jpg
 *.jpeg
 *.png
+
+data/*.csv
+data/*.json
+output/
